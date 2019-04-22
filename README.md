@@ -84,32 +84,54 @@ CapsNet also contain decoding or reconstruction part. But we skip that as it is 
 1) download dataset using following commands. It will save dataset in respective directory in data folder.
 
 **For MNIST:**
+
 mkdir -p data/mnist
+
 wget -c -P data/mnist http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+
 wget -c -P data/mnist http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+
 wget -c -P data/mnist http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+
 wget -c -P data/mnist http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+
 gunzip data/mnist/*.gz
 
 
 **For Fashion-MNIST:**
+
 mkdir -p data/fashion-mnist 
+
 wget -c -P data/fashion-mnist http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz
+
 wget -c -P data/fashion-mnist http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
+
 wget -c -P data/fashion-mnist http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
+
 wget -c -P data/fashion-mnist http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
+
 gunzip data/fashion-mnist/*.gz
 
 2) Training:
+
 for MNIST
+
 python main.py –datasetToUse mnist
+
 or for fashion-mnist
- python main.py – datasetToUse fashion-mnist 
+
+python main.py – datasetToUse fashion-mnist 
+
 3) for visualizing training loss graphs:
+
 tensorboard --logdir=logdir –port= 6006 (or any other free port)
+
 4) for accuracy:
+
 python main.py --is_training=False
+
 for fashion-mnist dataset
+
 python main.py --datasetToUse fashion-mnist --is_training=False 
 
 # Results:
@@ -126,6 +148,7 @@ Similar to Fashion-MNIST, MNIST dataset consists of 70,000 images with a split o
 **************** Fig 10-> margin loss……. Fig11 -> reconstruction loss…… Fig 12 -> total loss 
 
 # Analysis:
+
 Following are some observations/analysis about capsule neural networks that we made during this assignment work:
 1. Network is shallow (not like deep CNN models)
 2. Dynamic routing co-efficient Cij’s are computed runtime (training and testing) and thus not learnable
