@@ -155,6 +155,8 @@ Following are some observations/analysis about capsule neural networks that we m
 3. Still need backpropogation for W’s
 4. Still convolution is required
 
+They have some major issues like they take so much time and consequenty slow as well. But they give a new perspective in deep learning research with focus on establishing spatial relationship between related objects in an image.
+
 References:
 
 [1] Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in neural information processing systems. 2017.
