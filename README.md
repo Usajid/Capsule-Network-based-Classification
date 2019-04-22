@@ -1,14 +1,21 @@
 # ML Assignment # 03 (Capsule Neural Networks)
 
 # Required Libraries/Modules:
+
 Python
+
 NumPy
+
 Tensorflow>=1.3
+
 Tensorboard (usually comes with Tensorflow install)
+
 GPU is required. We used Titan XP for training, validation and testing.
 
 # Datasets used:
+
 1) Fashion-MNIST
+
 2) MNIST
 
 # Process and Algorithms:
