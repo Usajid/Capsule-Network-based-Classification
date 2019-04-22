@@ -33,49 +33,52 @@ Whereas Capsules do following operations:
 4. vector-to-vector nonlinearity
 Capsules also do not use bias value. This difference is shown in figure below [2]:
 
-![Using smaller version of dataset](Figures/fig2.png)
+![Using smaller version of dataset](figures/fig2.png)
 
 
 
 Consequently, different capsule layers form a capsule block. First such block is known as Parent capsule. Within each capsule block, they adjust their weights to form output of block amid learning spatial relationship. This is done using Dynamic Routing algorithm as in paper [1] and shown in following figure (as adapted form paper [1] and [2]):
 
-![Using smaller version of dataset](Figures/fig3.png)
+![Using smaller version of dataset](figures/fig3.png)
 
 
 Above routing is done and adjusted iteratively, thus known as “iterative dynamic routing” so capsule at layer ‘i’ can learn about most suitable capsule in next layer ‘j’.  This learning process to route a capsule from previous layer to the next one in a capsule block to generate the final output of a capsule block is known as “Routing-by-agreement” which is as given in paper as follows [1]:
 
-![Using smaller version of dataset](Figures/fig4.png)
+![Using smaller version of dataset](figures/fig4.png)
 
 According to the paper [1], 3 iterations in above dynamic routing algorithm are the most suitable. We used 3 iterations during our experiments as well.
 Capsule Network Architecture:
 Finally, capsule network aka CapsNet is as follows as given in paper [1]:
 
-![Using smaller version of dataset](Figures/fig5.png)
+![Using smaller version of dataset](figures/fig5.png)
 
 It consists of a primary capsule block after the first convolutional layer block. Primary capsule block consists of 32 depth size based 8D capsules.
 Loss Function:
 Capsules use a separate margin loss Lc for each category c digit present in as below [1]. During training, for each training example, one loss value will be calculated for each of the 10 vectors according to the formula then the 10 values will be added together to calculate the final loss [1]
 
-![Using smaller version of dataset](Figures/fig6.png)
+![Using smaller version of dataset](figures/fig6.png)
 
 We think that following are some major pros and cons of using Capsule Networks after during our assignment experiments:
-Pros of CapsNet:
+# Pros of CapsNet:
 1. Less training data
 2. Position and Pose information preserved (Equivariance)
 3. Promising for segmentation and detection
 4. Nicely map hierarchy of parts
 5. Max Pooling alternate
 6. Robust to translation, rotation
-Cons:
+# Cons:
 1. Not tested on larger images or different datasets
 2. Cannot identify two identical objects very close to each other
 3. Slow to train due to routing (Took us 3 days on average to train on MNIST and Fashion-MNIST separately for 50 epochs)
 CapsNet also contain decoding or reconstruction part. But we skip that as it is out of the scope of this assignment.
-Commands:
-1) download dataset using following commands. It will save dataset in respective directory in data folder.
-For MNIST:
 
-For Fashion-MNIST:
+# Commands:
+
+1) download dataset using following commands. It will save dataset in respective directory in data folder.
+
+# For MNIST:
+
+# For Fashion-MNIST:
 
 2) Training:
 for MNIST
@@ -89,15 +92,20 @@ python main.py --is_training=False
 for fashion-mnist dataset
 python main.py --datasetToUse fashion-mnist --is_training=False 
 
-Results:
+# Results:
 We used 2 different datasets during our experiments; MNIST and Fashion-MNIST. In each case, we trained for 50 epochs that took on average approximately 3 days training time.  We also used batch size of 128.
 Results on Fashion-MNIST:
 Fashion-MNIST consists of 70,000 gray scale images of 28x28 size with a split of 60,000 training and 10,000 testing images. We zero padded to make them of 32x32 size for CapsNet. CapsNet accuracy in case of Fashion-MNIST comes out to be 90%. We have 2 losses; margin and reconstruction loss for encoder and decoder respectively as in Fig. 7 and Fig. 8. Finally total loss during training, which is the sum of these two losses, is shown in Fig. 9. Loss decreases as steps go on during training, thus indicating convergence of system.
+
 **************** Fig 7-> margin loss……. Fig8 -> reconstruction loss…… Fig 9 -> total loss 
-Results on MNIST:
+
+# Results on MNIST:
+
 Similar to Fashion-MNIST, MNIST dataset consists of 70,000 images with a split of 60,000 training and 10,000 testing images of 28x28 size. For CapsNet, we zero-padded to make these images 32x32. The accuracy we get for MNIST dataset is 99%. Below we show different losses during training progress. We have 2 losses; margin and reconstruction loss for encoder and decoder respectively as in Fig. 10 and Fig. 11. Finally total loss during training, which is the sum of these two losses, is shown in Fig. 12. Loss decreases as steps go on during training, thus indicating convergence of system.
+
 **************** Fig 10-> margin loss……. Fig11 -> reconstruction loss…… Fig 12 -> total loss 
-Analysis:
+
+# Analysis:
 Following are some observations/analysis about capsule neural networks that we made during this assignment work:
 1. Network is shallow (not like deep CNN models)
 2. Dynamic routing co-efficient Cij’s are computed runtime (training and testing) and thus not learnable
