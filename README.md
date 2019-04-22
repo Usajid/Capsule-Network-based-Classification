@@ -76,9 +76,9 @@ CapsNet also contain decoding or reconstruction part. But we skip that as it is 
 
 1) download dataset using following commands. It will save dataset in respective directory in data folder.
 
-# For MNIST:
+**For MNIST:**
 
-# For Fashion-MNIST:
+**For Fashion-MNIST:**
 
 2) Training:
 for MNIST
