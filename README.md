@@ -77,8 +77,21 @@ CapsNet also contain decoding or reconstruction part. But we skip that as it is 
 1) download dataset using following commands. It will save dataset in respective directory in data folder.
 
 **For MNIST:**
+mkdir -p data/mnist
+wget -c -P data/mnist http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+wget -c -P data/mnist http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+wget -c -P data/mnist http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+wget -c -P data/mnist http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+gunzip data/mnist/*.gz
+
 
 **For Fashion-MNIST:**
+mkdir -p data/fashion-mnist 
+wget -c -P data/fashion-mnist http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz
+wget -c -P data/fashion-mnist http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
+wget -c -P data/fashion-mnist http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
+wget -c -P data/fashion-mnist http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
+gunzip data/fashion-mnist/*.gz
 
 2) Training:
 for MNIST
