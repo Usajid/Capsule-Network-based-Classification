@@ -21,9 +21,9 @@ GPU is required. We used Titan XP for training, validation and testing.
 # Process and Algorithms:
 In this assignment, we explore relatively newer type of convolutional neural network being introduced in NIPS, 2017 [1] named as “Capsule Networks”. They are proposed to cater for equi-variance issue in CNNs where a normal CNN is good in detecting and mapping complex objects but lack understanding of spatial relationship (perspective, position etc.) between such objects e.g. Nose and mouth spatial relationship in case of face detection.
 
-In simple but novel trick, capsule networks group neurons to form capsule layers that not only find probability of different features but also other parameters of those features e.g. angle, scale etc. So following figure gives basic difference between a neuron and a capsule [2]
+In simple but novel trick, capsule networks group neurons to form capsule layers that not only find probability of different features but also other parameters of those features e.g. angle, scale etc. So following figure gives basic difference between a neuron and a capsule [2].
 
-![Using smaller version of dataset](figures/fig1.png)
+![Neuron vs Capsule[2]](figures/fig1.png)
 
 
 As shown in Fig. 1, capsules capture all important information about features in the form of vectors instead of only storing scalar (probability) value as in case of neurons. 
