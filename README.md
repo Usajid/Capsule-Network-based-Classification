@@ -15,7 +15,10 @@ GPU is required. We used Titan XP for training, validation and testing.
 In this assignment, we explore relatively newer type of convolutional neural network being introduced in NIPS, 2017 [1] named as “Capsule Networks”. They are proposed to cater for equi-variance issue in CNNs where a normal CNN is good in detecting and mapping complex objects but lack understanding of spatial relationship (perspective, position etc.) between such objects e.g. Nose and mouth spatial relationship in case of face detection.
 
 In simple but novel trick, capsule networks group neurons to form capsule layers that not only find probability of different features but also other parameters of those features e.g. angle, scale etc. So following figure gives basic difference between a neuron and a capsule [2]
-**************fig1***************
+
+![Using smaller version of dataset](Figures/fig1.png)
+
+
 As shown in Fig. 1, capsules capture all important information about features in the form of vectors instead of only storing scalar (probability) value as in case of neurons. 
 In mathematical operation terms, neurons work to learn weights using following steps:
 Neurons
@@ -29,19 +32,32 @@ Whereas Capsules do following operations:
 3. sum of weighted input vectors
 4. vector-to-vector nonlinearity
 Capsules also do not use bias value. This difference is shown in figure below [2]:
-*********** fig 2 *************
+
+![Using smaller version of dataset](Figures/fig2.png)
+
+
+
 Consequently, different capsule layers form a capsule block. First such block is known as Parent capsule. Within each capsule block, they adjust their weights to form output of block amid learning spatial relationship. This is done using Dynamic Routing algorithm as in paper [1] and shown in following figure (as adapted form paper [1] and [2]):
-************ fig 3*****************
+
+![Using smaller version of dataset](Figures/fig3.png)
+
+
 Above routing is done and adjusted iteratively, thus known as “iterative dynamic routing” so capsule at layer ‘i’ can learn about most suitable capsule in next layer ‘j’.  This learning process to route a capsule from previous layer to the next one in a capsule block to generate the final output of a capsule block is known as “Routing-by-agreement” which is as given in paper as follows [1]:
-*************fig 4********************
+
+![Using smaller version of dataset](Figures/fig4.png)
+
 According to the paper [1], 3 iterations in above dynamic routing algorithm are the most suitable. We used 3 iterations during our experiments as well.
 Capsule Network Architecture:
 Finally, capsule network aka CapsNet is as follows as given in paper [1]:
-******************* fig 5 *********************
+
+![Using smaller version of dataset](Figures/fig5.png)
+
 It consists of a primary capsule block after the first convolutional layer block. Primary capsule block consists of 32 depth size based 8D capsules.
 Loss Function:
 Capsules use a separate margin loss Lc for each category c digit present in as below [1]. During training, for each training example, one loss value will be calculated for each of the 10 vectors according to the formula then the 10 values will be added together to calculate the final loss [1]
-*************** fig 6 *********************
+
+![Using smaller version of dataset](Figures/fig6.png)
+
 We think that following are some major pros and cons of using Capsule Networks after during our assignment experiments:
 Pros of CapsNet:
 1. Less training data
