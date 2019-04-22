@@ -88,6 +88,9 @@ Following are some observations/analysis about capsule neural networks that we m
 3. Still need backpropogation for W’s
 4. Still convolution is required
 
+References:
 
-[1] capsule network paper
+[1] Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in neural information processing systems. 2017.
+
+
 [2] https://pechyonkin.me/capsules-2/
