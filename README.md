@@ -23,7 +23,7 @@ In this assignment, we explore relatively newer type of convolutional neural net
 
 In simple but novel trick, capsule networks group neurons to form capsule layers that not only find probability of different features but also other parameters of those features e.g. angle, scale etc. So following figure gives basic difference between a neuron and a capsule [2].
 
-![Neuron vs Capsule[2]](figures/fig1.png)
+![Neuron vs Capsule](figures/fig1.png)
 
 
 As shown in Fig. 1, capsules capture all important information about features in the form of vectors instead of only storing scalar (probability) value as in case of neurons. 
