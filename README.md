@@ -40,30 +40,30 @@ Whereas Capsules do following operations:
 4. vector-to-vector nonlinearity
 Capsules also do not use bias value. This difference is shown in figure below [2]:
 
-![Using smaller version of dataset](figures/fig2.png)
+![Capsule vs neuron in mathematical operations terms](figures/fig2.png)
 
 
 
 Consequently, different capsule layers form a capsule block. First such block is known as Parent capsule. Within each capsule block, they adjust their weights to form output of block amid learning spatial relationship. This is done using Dynamic Routing algorithm as in paper [1] and shown in following figure (as adapted form paper [1] and [2]):
 
-![Using smaller version of dataset](figures/fig3.png)
+![Routing Algortihm between capsule layers](figures/fig3.png)
 
 
 Above routing is done and adjusted iteratively, thus known as “iterative dynamic routing” so capsule at layer ‘i’ can learn about most suitable capsule in next layer ‘j’.  This learning process to route a capsule from previous layer to the next one in a capsule block to generate the final output of a capsule block is known as “Routing-by-agreement” which is as given in paper as follows [1]:
 
-![Using smaller version of dataset](figures/fig4.png)
+![Routing-by-agreement algorithm](figures/fig4.png)
 
 According to the paper [1], 3 iterations in above dynamic routing algorithm are the most suitable. We used 3 iterations during our experiments as well.
 Capsule Network Architecture:
 Finally, capsule network aka CapsNet is as follows as given in paper [1]:
 
-![Using smaller version of dataset](figures/fig5.png)
+![CapsNet Architecture](figures/fig5.png)
 
 It consists of a primary capsule block after the first convolutional layer block. Primary capsule block consists of 32 depth size based 8D capsules.
 Loss Function:
 Capsules use a separate margin loss Lc for each category c digit present in as below [1]. During training, for each training example, one loss value will be calculated for each of the 10 vectors according to the formula then the 10 values will be added together to calculate the final loss [1]
 
-![Using smaller version of dataset](figures/fig6.png)
+![Loss Function of CapsNet](figures/fig6.png)
 
 We think that following are some major pros and cons of using Capsule Networks after during our assignment experiments:
 # Pros of CapsNet:
