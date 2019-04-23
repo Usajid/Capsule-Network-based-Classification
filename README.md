@@ -124,7 +124,7 @@ python main.py – datasetToUse fashion-mnist
 
 3) for visualizing training loss graphs:
 
-tensorboard --logdir=logdir –port= 6006 (or any other free port)
+tensorboard --logdir=logdir --port= 6006 (or any other free port)
 
 4) for accuracy:
 
