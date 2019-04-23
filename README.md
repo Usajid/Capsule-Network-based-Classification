@@ -77,8 +77,8 @@ We think that following are some major pros and cons of using Capsule Networks a
 # Cons:
 1. Not tested on larger images or different datasets
 2. Cannot identify two identical objects very close to each other
-3. Slow to train due to routing (Took us 3 days on average to train on MNIST and Fashion-MNIST separately for 50 epochs)
-CapsNet also contain decoding or reconstruction part. But we skip that as it is out of the scope of this assignment.
+3. Slow to train due to routing (Took us 3 days on average to train on MNIST and Fashion-MNIST separately for 50 epochs).
+
 
 # Commands:
 
@@ -136,7 +136,7 @@ for fashion-mnist dataset
 python main.py --datasetToUse fashion-mnist --is_training=False 
 
 # Results:
-We used 2 different datasets during our experiments; MNIST and Fashion-MNIST. In each case, we trained for 50 epochs that took on average approximately 3 days training time.  We also used batch size of 128.
+We used 2 different datasets during our experiments; MNIST and Fashion-MNIST. In each case, we trained for 50 epochs that took on average approximately 3 days training time.  We also used batch size of 128. CapsNet also contain decoding or reconstruction part. But we skip that as it is out of the scope of this assignment and focus mainly on prediciton/classification part.
 
 # Results on Fashion-MNIST:
 
