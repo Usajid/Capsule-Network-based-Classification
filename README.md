@@ -173,6 +173,7 @@ Following are some observations/analysis about capsule neural networks that we m
 2. Dynamic routing co-efficient Cij’s are computed runtime (training and testing) and thus not learnable
 3. Still need backpropogation for W’s
 4. Still convolution is required
+5. Due to iterative dynamic routing algorithm, they take a lot of training and validation time (3-4 days on average for us) even on a pretty decent Titan Xp GPU.
 
 They have some major issues like they take so much time and consequenty slow as well. But they give a new perspective in deep learning research with focus on establishing spatial relationship between related objects in an image.
 
