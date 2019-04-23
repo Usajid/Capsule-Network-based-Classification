@@ -38,6 +38,7 @@ Whereas Capsules do following operations:
 2. scalar weighting of input vectors
 3. sum of weighted input vectors
 4. vector-to-vector nonlinearity
+
 Capsules also do not use bias value. This difference is shown in figure below [2]:
 
 ![Capsule vs neuron in mathematical operations terms](figures/fig2.png)
