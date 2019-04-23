@@ -148,6 +148,8 @@ Fashion-MNIST consists of 70,000 gray scale images of 28x28 size with a split of
 
 ![Total Loss](figures/fig12.png)
 
+Although this is out of scope for this assignment as this work is focusing on prediction part, but following figure shows the reconstruction part of CapsNet decoder as visualized using Tensorflow.
+
 ![Some reconstructed images](figures/fig13.png)
 
 
