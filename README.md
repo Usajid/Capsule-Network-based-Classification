@@ -2,7 +2,7 @@
 
 # Required Libraries/Modules:
 
-Python > 3
+Python >= 3
 
 NumPy
 
