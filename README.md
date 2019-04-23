@@ -139,13 +139,26 @@ We used 2 different datasets during our experiments; MNIST and Fashion-MNIST. In
 Results on Fashion-MNIST:
 Fashion-MNIST consists of 70,000 gray scale images of 28x28 size with a split of 60,000 training and 10,000 testing images. We zero padded to make them of 32x32 size for CapsNet. CapsNet accuracy in case of Fashion-MNIST comes out to be 90%. We have 2 losses; margin and reconstruction loss for encoder and decoder respectively as in Fig. 7 and Fig. 8. Finally total loss during training, which is the sum of these two losses, is shown in Fig. 9. Loss decreases as steps go on during training, thus indicating convergence of system.
 
-**************** Fig 7-> margin loss……. Fig8 -> reconstruction loss…… Fig 9 -> total loss 
+
+![Margin loss](figures/fig10.png)
+
+![Reconstruction Loss](figures/fig11.png)
+
+![Total Loss](figures/fig12.png)
+
+![Some reconstructed images](figures/fig13.png)
+
+
 
 # Results on MNIST:
 
 Similar to Fashion-MNIST, MNIST dataset consists of 70,000 images with a split of 60,000 training and 10,000 testing images of 28x28 size. For CapsNet, we zero-padded to make these images 32x32. The accuracy we get for MNIST dataset is 99%. Below we show different losses during training progress. We have 2 losses; margin and reconstruction loss for encoder and decoder respectively as in Fig. 10 and Fig. 11. Finally total loss during training, which is the sum of these two losses, is shown in Fig. 12. Loss decreases as steps go on during training, thus indicating convergence of system.
 
-**************** Fig 10-> margin loss……. Fig11 -> reconstruction loss…… Fig 12 -> total loss 
+![Margin loss](figures/fig7.png)
+
+![Reconstruction Loss](figures/fig8.png)
+
+![Total Loss](figures/fig9.png)
 
 # Analysis:
 
