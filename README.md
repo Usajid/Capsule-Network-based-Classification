@@ -136,7 +136,7 @@ for fashion-mnist dataset
 python main.py --datasetToUse fashion-mnist --is_training=False 
 
 # Results:
-We used 2 different datasets during our experiments; MNIST and Fashion-MNIST. In each case, we trained for 50 epochs that took on average approximately 3 days training time.  We also used batch size of 128. CapsNet also contain decoding or reconstruction part. But we skip most part of that as it is out of the scope of this assignment and focus mainly on prediciton/classification part.
+We used 2 different datasets during our experiments; MNIST and Fashion-MNIST. In each case, we trained for 50 epochs that took on average approximately 3 days training time.  We also used batch size of 128. CapsNet also contain decoding or reconstruction part. But we skip most part of that as it is out of the scope of this assignment and focus mainly on prediction/classification part.
 
 # Results on Fashion-MNIST:
 
@@ -175,7 +175,7 @@ Following are some observations/analysis about capsule neural networks that we m
 4. Still convolution is required
 5. Due to iterative dynamic routing algorithm, they take a lot of training and validation time (3-4 days on average for us) even on a pretty decent Titan Xp GPU.
 
-They have some major issues like they take so much time and consequenty slow as well. But they give a new perspective in deep learning research with focus on establishing spatial relationship between related objects in an image.
+Finally,they have some major issues like they take so much time and consequenty slow as well. But they give a new perspective in deep learning research with focus on establishing spatial relationship between related objects in an image.
 
 References:
 
