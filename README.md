@@ -136,7 +136,7 @@ for fashion-mnist dataset
 python main.py --datasetToUse fashion-mnist --is_training=False 
 
 # Results:
-We used 2 different datasets during our experiments; MNIST and Fashion-MNIST. In each case, we trained for 50 epochs that took on average approximately 3 days training time.  We also used batch size of 128. CapsNet also contain decoding or reconstruction part. But we skip that as it is out of the scope of this assignment and focus mainly on prediciton/classification part.
+We used 2 different datasets during our experiments; MNIST and Fashion-MNIST. In each case, we trained for 50 epochs that took on average approximately 3 days training time.  We also used batch size of 128. CapsNet also contain decoding or reconstruction part. But we skip most part of that as it is out of the scope of this assignment and focus mainly on prediciton/classification part.
 
 # Results on Fashion-MNIST:
 
