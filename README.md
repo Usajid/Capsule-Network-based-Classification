@@ -136,7 +136,9 @@ python main.py --datasetToUse fashion-mnist --is_training=False
 
 # Results:
 We used 2 different datasets during our experiments; MNIST and Fashion-MNIST. In each case, we trained for 50 epochs that took on average approximately 3 days training time.  We also used batch size of 128.
-Results on Fashion-MNIST:
+
+# Results on Fashion-MNIST:
+
 Fashion-MNIST consists of 70,000 gray scale images of 28x28 size with a split of 60,000 training and 10,000 testing images. We zero padded to make them of 32x32 size for CapsNet. CapsNet accuracy in case of Fashion-MNIST comes out to be 90%. We have 2 losses; margin and reconstruction loss for encoder and decoder respectively as in Fig. 7 and Fig. 8. Finally total loss during training, which is the sum of these two losses, is shown in Fig. 9. Loss decreases as steps go on during training, thus indicating convergence of system.
 
 
