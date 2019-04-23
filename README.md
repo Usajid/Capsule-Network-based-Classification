@@ -154,6 +154,7 @@ Although this is out of scope for this assignment as this work is focusing on pr
 ![Some reconstructed images](figures/fig13.png)
 
 
+As it can be seen above, reconstructed images show that the model is training as required in right direction.
 
 # Results on MNIST:
 
