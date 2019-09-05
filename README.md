@@ -1,4 +1,4 @@
-# ML Assignment # 03 (Capsule Neural Networks)
+# Capsule Neural Networks based Classification
 
 # Required Libraries/Modules:
 
